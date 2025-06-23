@@ -1,8 +1,10 @@
 :root {
-  --primary: #2c3e50;
-  --accent: #00aaff;
-  --background: #f9f9f9;
-  --text: #333;
+  --primary: #0e1320;
+  --accent: #4ea0f7;
+  --background: #0a0f1a;
+  --text: #e0e6ed;
+  --card-bg: #141c2f;
+  --card-border: #1e293b;
 }
 
 * {
@@ -12,7 +14,7 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.6;
@@ -25,46 +27,61 @@ body {
   padding: 1rem 0;
 }
 
+/* Header */
 header {
   background-color: var(--primary);
   color: white;
-  padding: 2rem 0;
+  padding: 3rem 0;
   text-align: center;
+  border-bottom: 1px solid var(--card-border);
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 .tagline {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  opacity: 0.9;
+  font-size: 1.2rem;
+  color: #cbd5e1;
 }
 
+/* Main Sections */
 main {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .intro,
 .features,
 .cta {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
+.intro h2,
+.features h2,
+.cta h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* Features List */
 .features ul {
   list-style: none;
   padding-left: 0;
 }
 
 .features li {
-  background: white;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
+  background: var(--card-bg);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
   border-left: 4px solid var(--accent);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(78, 160, 247, 0.05);
+  color: #d1d9e6;
 }
 
+/* Call to Action */
 .cta {
   text-align: center;
 }
@@ -78,15 +95,19 @@ main {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
+  transition: background 0.2s ease;
 }
 
 .button:hover {
-  background: #008ecc;
+  background: #3a8fd8;
 }
 
+/* Footer */
 footer {
-  background: #eee;
+  background: var(--primary);
   text-align: center;
-  padding: 1rem 0;
+  padding: 2rem 0;
   font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid var(--card-border);
 }
