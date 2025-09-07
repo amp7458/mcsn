@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MCSN Online</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <header>
@@ -22,7 +24,8 @@
     <section class="intro">
       <h2>What is MCSN?</h2>
       <p>
-        MCSN Online is a modern server network platform built to host and support a wide range of services — from game servers to file hosting, all backed by scalable infrastructure and a strong community focus.
+        MCSN Online is a modern server network platform built to host and support a wide range of services — from game
+        servers to file hosting, all backed by scalable infrastructure and a strong community focus.
       </p>
     </section>
 
@@ -36,7 +39,31 @@
         <li>💬 Community-first Ecosystem</li>
       </ul>
     </section>
+    <!--7458.space Countdown-->
+    <p id="counterheader">7458.space expires in:</p>
+    <p id="counter"></p>
 
+    <script>
+      var countDownDate = new Date("Sep 15, 2025 20:00:00").getTime();
+
+      var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("counter").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("counter").innerHTML = "Expired September 15, 8PM EST";
+        }
+      }, 1000);
+    </script>
+    <!--end of counter-->
     <section class="cta">
       <h2>Join the Network</h2>
       <p>Get started with your own service or join the growing ecosystem.</p>
@@ -53,4 +80,5 @@
   </footer>
 
 </body>
+
 </html>
